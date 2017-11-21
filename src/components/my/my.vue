@@ -5,7 +5,7 @@
     <el-button type="primary" size="small" @click="$store.dispatch('addAction')">加100action</el-button>
     <el-button type="primary" size="small" @click="$store.dispatch('reduceAction')">减100action</el-button>
     <el-input v-model="input" placeholder="请输入内容"></el-input>
-    <p>getters:{{ count }}</p>
+    <p>getters:{{ get }}</p>
   </div>
 </template>
 <script>
@@ -15,7 +15,7 @@ import { mapState,mapMutations,mapGetters,mapActions } from 'vuex';
   export default {
     computed:{
       ...mapGetters([
-        'count'
+        'get'
       ])
     },
     data () {

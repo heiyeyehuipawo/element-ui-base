@@ -1,6 +1,6 @@
 const getters = {
-  count: function(state){
-    return state.userName = '奢靡'
+  get: function(state){
+    return state.acount = 'getters'
   },
 }
 export default getters

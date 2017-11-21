@@ -8,7 +8,8 @@ const state = {
   count: 0,
   max: 100000,
   min: 10000,
-  userName:'淫邪王'
+  acount: 'acount',
+  userName:'等哈哈',
 }
 export default new Vuex.Store({
   state,

@@ -6,7 +6,7 @@ const actions ={
       commit('reduce',100)
   },
   changeAction({commit}){
-    commit('change','该戒色了')
+    commit('change','未央区我')
   }
 }
 export default actions
