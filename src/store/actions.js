@@ -7,6 +7,9 @@ const actions ={
   },
   changeAction({commit}){
     commit('change','未央区我')
+  },
+  changeCountAction(ontext){
+    ontext.commit('changeCount',5)
   }
 }
 export default actions

@@ -38,9 +38,9 @@
     methods: {
       submitForm(formName) {
         this.$refs[formName].validate((valid) => {
-          if (valid) {
+          if (this.form.username === 'system' && this.form.password === '123456') {
             this.dialogFormVisible = false;
-            this.$router.push('/')
+            this.$router.push('/index')
           } else {
             console.log('error submit!!');
             return false;

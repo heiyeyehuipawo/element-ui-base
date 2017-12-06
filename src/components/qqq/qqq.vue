@@ -1,6 +1,6 @@
 <template>
   <div>
-    <router-view></router-view>
+    <p>QQQ</p>
   </div>
 </template>
 <script>

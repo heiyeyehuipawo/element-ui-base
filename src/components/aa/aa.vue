@@ -15,7 +15,7 @@
     props: ['cc','show'],
     data () {
       return {
-        aa: '废物',
+        aa: '发放',
       }
     },
     methods: {

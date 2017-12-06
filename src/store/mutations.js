@@ -7,6 +7,9 @@ const mutations = {
   },
   change(state,n){
     state.userName = n
+  },
+  changeCount(state,n){
+    state.count+=n
   }
 }
 export default mutations

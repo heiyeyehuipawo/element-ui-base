@@ -2,7 +2,10 @@
   <div>
     {{ abc }}
     <el-button type="primary" size="small" @click="bus">改变input</el-button>
-    <el-button type="primary" size="small" @click="ccc">改变username</el-button>
+    <el-button type="primary" size="small" @click="ccc">改变count Bus</el-button>
+    <el-button type="primary" size="small" @click="$store.commit('changeCount',5)">改变count vuex mutation</el-button>
+    <el-button type="primary" size="small" @click="$store.dispatch('changeCountAction')">改变count vuex action</el-button>
+    <el-button type="primary" size="small" @click="ddd">回到登陆</el-button>
   </div>
 </template>
 <script>
@@ -24,7 +27,10 @@ import Bus from '../../bus/bus'
         Bus.$emit('change','123456789')
       },
       ccc() {
-        Bus.$emit('username','666')
+        Bus.$emit('count',5)
+      },
+      ddd() {
+        this.$router.push('/')
       }
     }
   }

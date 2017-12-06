@@ -27,10 +27,7 @@
       }
     },
     created () {
-      Bus.$on('username',(username)=> {
-        this.username = username
-        console.log(this.username)
-      })
+      
     },
     components:{
       Aa:Aa,

@@ -14,7 +14,7 @@
             </template>
             <el-menu-item-group>
               <template slot="title">分组一</template>
-              <el-menu-item index="1-1"><router-link to="/login">登陆</router-link></el-menu-item>
+              <el-menu-item index="1-1"><router-link to="/">登陆</router-link></el-menu-item>
               <el-menu-item index="1-2"><router-link to="/user">用户信息</router-link></el-menu-item>
             </el-menu-item-group>
             <el-menu-item-group title="分组2">
@@ -36,18 +36,23 @@
         </el-menu>
       </el-col>
     </el-row>
+    <router-link to="/date">日历</router-link>
     <p>{{ $store.state.count }}</p>
     <p>{{ max }}</p>
     <p>{{ min }}</p>
     <My></My>
     <You></You>
+    <el-button type="success" @click="$router.push('qqq')">成功按钮</el-button>
+    <my-Button></my-Button>
   </div>
 </template>
 <script>
 import My from '../my/my'
 import You from '../you/you'
 import store from '../../store/index'
-import { mapState,mapMutations,mapGetters,mapActions } from 'vuex';
+import Button from '../Button/Button'
+import Bus from '../../bus/bus'
+import { mapState } from 'vuex';
   export default {
     computed:{
       ...mapState([
@@ -56,6 +61,11 @@ import { mapState,mapMutations,mapGetters,mapActions } from 'vuex';
         'min'
       ]),
     },
+    created () {
+      Bus.$on("count",(value)=>{
+        this.$store.state.count += value
+      })
+    },
     data () {
       return {
 
@@ -63,7 +73,8 @@ import { mapState,mapMutations,mapGetters,mapActions } from 'vuex';
     },
     components: {
       My:My,
-      You:You
+      You:You,
+      myButton:Button
     },
     methods: {
       handleOpen(key, keyPath) {
@@ -71,7 +82,7 @@ import { mapState,mapMutations,mapGetters,mapActions } from 'vuex';
       },
       handleClose(key, keyPath) {
         
-      }
+      },
     }
   }
 </script>
