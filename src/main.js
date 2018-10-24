@@ -7,7 +7,7 @@ import VueRouter from 'vue-router'
 import store from './store/index'
 Vue.use(ElementUI)
 Vue.use(VueRouter)
-
+// 提交代码
 const router = new VueRouter({
   routes,
   mode: 'history',
