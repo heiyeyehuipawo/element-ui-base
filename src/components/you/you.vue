@@ -5,7 +5,6 @@
     <el-button type="primary" size="small" @click="ccc">改变count Bus</el-button>
     <el-button type="primary" size="small" @click="$store.commit('changeCount',5)">改变count vuex mutation</el-button>
     <el-button type="primary" size="small" @click="$store.dispatch('changeCountAction')">改变count vuex action</el-button>
-    <el-button type="primary" size="small" @click="ddd">回到登陆</el-button>
   </div>
 </template>
 <script>
@@ -14,13 +13,11 @@ import Bus from '../../bus/bus'
     data () {
       return {
         input: 'zzz',
-        abc: '111111111',
+        abc: 'you-component',
       }
     },
     created () {
-      Bus.$on("dfdf",(message)=>{
-        this.abc = message
-      })
+      
     },
     methods: {
       bus() {
@@ -29,9 +26,6 @@ import Bus from '../../bus/bus'
       ccc() {
         Bus.$emit('count',5)
       },
-      ddd() {
-        this.$router.push('/')
-      }
     }
   }
 </script>

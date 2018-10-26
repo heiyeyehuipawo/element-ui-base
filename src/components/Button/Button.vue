@@ -14,7 +14,7 @@
     },
     methods: {
       handleClick(e) {
-        this.$emit('click',e)
+        this.$emit('buttonClick','来自myButton')
       }
     }
       

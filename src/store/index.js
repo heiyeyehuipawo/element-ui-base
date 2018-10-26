@@ -9,7 +9,7 @@ const state = {
   max: 100000,
   min: 10000,
   acount: 'acount',
-  userName:'等哈哈',
+  userName:'globeUserName',
 }
 export default new Vuex.Store({
   state,

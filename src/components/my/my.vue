@@ -2,7 +2,7 @@
   <div>
     <el-button type="primary" size="small" @click="$store.commit('add',5)">加5mutation</el-button>
     <el-button type="primary" size="small" @click="$store.commit('reduce',5)">减5mutation</el-button>
-    <el-button type="primary" size="small" @click="$store.dispatch('addAction')">加100action</el-button>
+    <el-button type="primary" size="small" @click="$store.dispatch('add')">加100action</el-button>
     <el-button type="primary" size="small" @click="$store.dispatch('reduceAction')">减100action</el-button>
     <el-input v-model="input" placeholder="请输入内容"></el-input>
     <p>getters:{{ get }}</p>
@@ -11,7 +11,7 @@
 <script>
 import Bus from '../../bus/bus'
 import store from '../../store/index'
-import { mapState,mapMutations,mapGetters,mapActions } from 'vuex';
+import { mapMutations,mapGetters,mapActions } from 'vuex';
   export default {
     computed:{
       ...mapGetters([
@@ -20,15 +20,14 @@ import { mapState,mapMutations,mapGetters,mapActions } from 'vuex';
     },
     data () {
       return {
-        input: 'zzz',
-        userName: 'asdasdasdasdasdasdaaa'
+        input: 'my-component',
+        userName: 'my-component-username'
       }
     },
     created() {
       Bus.$on("change",(message)=>{
         this.input = message      
-      }),
-      Bus.$emit('dfdf',this.userName);
+      })
     },
     methods: {
       ...mapMutations([

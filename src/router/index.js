@@ -3,7 +3,6 @@
 import Login from '../components/login/login.vue'
 import Index from '../components/index/index.vue'
 import User from '../components/user/user.vue'
-import Date from '../components/date/date.vue'
 import Qqq from '../components/qqq/qqq.vue'
 export default [
   {
@@ -31,12 +30,6 @@ export default [
     name: 'user',
     component: User,
     meta: 'user'
-  },
-  {
-    path:'/date',
-    name: 'date',
-    component: Date,
-    meta: 'date'
   },
   {
     path: '*',

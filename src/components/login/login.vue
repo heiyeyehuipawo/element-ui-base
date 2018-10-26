@@ -18,7 +18,7 @@
     data () {
       return {
         form: {
-          username: '',
+          username: 'system',
           password: ''
         },
         rules:{ 
