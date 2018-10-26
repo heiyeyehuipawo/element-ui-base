@@ -11,7 +11,7 @@
   </div>
 </template>
 <script>
-  import Aa from '../aa/aa.vue'
+  import Aa from '../../components/aa/aa'
   import Bus from '../../bus/bus'
   import store from '../../store/index'
   import { mapState } from 'vuex';

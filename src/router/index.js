@@ -1,29 +1,11 @@
-
-
-import Login from '../components/login/login.vue'
-import Index from '../components/index/index.vue'
-import User from '../components/user/user.vue'
-import Qqq from '../components/qqq/qqq.vue'
+import Index from '../view/index/index.vue'
+import User from '../view/user/user.vue'
 export default [
   {
-    path:'/',
-    name: 'login',
-    component:Login,
-    meta: 'login'
-  },
-  {
-    path: '/index',
+    path: '/',
     name: 'index',
     component: Index,
     meta: 'index',
-    children:[
-      {
-        path: 'qqq',
-        component: Qqq,
-        name: 'qqq',
-        meta: 'qqq'
-      }
-    ]
   },
   {
     path:'/user',

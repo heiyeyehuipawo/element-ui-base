@@ -10,10 +10,10 @@
   </div>
 </template>
 <script>
-import My from '../my/my'
-import You from '../you/you'
+import My from '../../components/my/my'
+import You from '../../components/you/you'
 import store from '../../store/index'
-import Button from '../Button/Button'
+import Button from '../../components/Button/Button'
 import Bus from '../../bus/bus'
 import { mapState } from 'vuex';
   export default {
